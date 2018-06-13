@@ -93,7 +93,7 @@ module.exports = function(content) {
 	replace(content, PATTERN_IMAGE_SRC_SVG, async (image, source) => {
 
 		/* check for keyword in strict mode */
-		if(options.strict && !PATTERN_INLINE_KEYWORD.test(image)) {
+		if(options.inlineStrict && !PATTERN_INLINE_KEYWORD.test(image)) {
 			return image;
 		}
 
